@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C69347E9-D864-E799-D255-44A38CE76C1E}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69347E9-D864-E799-D255-44A38CE76C1E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2797D1-B689-18DB-BFE8-DE946FC6B44B}|Assembly-CSharp-Editor.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\assets\\editor\\playermovementeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2797D1-B689-18DB-BFE8-DE946FC6B44B}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\playermovementeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69347E9-D864-E799-D255-44A38CE76C1E}|Assembly-CSharp.csproj|e:\\repos\\unitycharactertest\\3dcharactertestbed\\assets\\scripts\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69347E9-D864-E799-D255-44A38CE76C1E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerCamera.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Scripts\\PlayerCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCamera.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Scripts\\PlayerCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerCamera.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T20:00:33.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMovementEditor.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Editor\\PlayerMovementEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\PlayerMovementEditor.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Editor\\PlayerMovementEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\PlayerMovementEditor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T19:22:01.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwD0AAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T20:34:54.61Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
