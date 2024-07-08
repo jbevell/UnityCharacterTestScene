@@ -1,4 +1,6 @@
+using System.Linq;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -30,15 +32,35 @@ public class Player : MonoBehaviour
 			Transform targetTransform = _currentFocusedTrigger.transform;
 
 			// Station
-			if (targetTransform.CompareTag(Tags.Station.ToString()))
+			////if (targetTransform.CompareTag(Tags.Station.ToString()))
+			////{
+			MonoBehaviour[] temp = _currentFocusedTrigger.GetComponents<MonoBehaviour>();
+
+			foreach(MonoBehaviour mono in temp)
 			{
-				if (_currentFocusedTrigger.GetComponent<Station>().OnPlayerInteraction(_heldObject))
-					OnObjectTaken();
+				if (mono as IInteractive != null)
+				{
+					switch(((IInteractive)mono).OnPlayerInteraction(_heldObject))
+					{
+						case ObjectInteractions.StationTake:
+							OnObjectTaken();
+							break;
+						case ObjectInteractions.TaskObjectPickUp:
+							PickUpItem(mono as TaskObject);
+							break;
+						default:
+							break;
+					}
+				}
 			}
 
+				////if (_currentFocusedTrigger.GetComponent<IStationInteractive>().OnPlayerInteraction(_heldObject))
+				////	OnObjectTaken();
+			////}
+
 			// Task Object
-			if (targetTransform.CompareTag(Tags.TaskObject.ToString()))
-				PickUpItem(_currentFocusedTrigger.GetComponent<TaskObject>());
+			////if (targetTransform.CompareTag(Tags.TaskObject.ToString()))
+				/////PickUpItem(_currentFocusedTrigger.GetComponent<TaskObject>());
 		}
 
 		if (Input.GetKeyDown(KeyCode.X) && IsHoldingObject)
@@ -143,7 +165,7 @@ public class Player : MonoBehaviour
 		_currentTriggerDistance = 100;
 		Debug.Log("Current held object: " + _heldObject);
 
-		OnObjectPickUpEvent(this);
+		////OnObjectPickUpEvent(this);
 	}
 
 	public void DropHeldItem()

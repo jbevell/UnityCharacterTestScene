@@ -4,7 +4,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine.AI;
 
-public class TaskObject : MonoBehaviour
+public class TaskObject : MonoBehaviour, IInteractive
 {
 	[SerializeField] protected GameObject _interactionInstructionObject;
 	[SerializeField] protected GameObject _mainObject;
@@ -47,13 +47,13 @@ public class TaskObject : MonoBehaviour
 
 		if (triggersMatch)
 		{
-			player.OnObjectPickUpEvent += OnPlayerInteraction;
+			////player.OnObjectPickUpEvent += OnPlayerInteraction;
 			_interactionInstructionRenderer.enabled = true;
 			Debug.LogWarning("Enabling E on trigger enter for " + transform.parent.name);
 		}
 		else
 		{
-			player.OnObjectPickUpEvent -= OnPlayerInteraction;
+			////player.OnObjectPickUpEvent -= OnPlayerInteraction;
 			_interactionInstructionRenderer.enabled = false;
 
 			Debug.LogWarning("Turning off E on enter for " + transform.parent.name);
@@ -71,27 +71,51 @@ public class TaskObject : MonoBehaviour
 
 		////if (player.PrioritizedTrigger == _playerDetectionZone)
 		{
-			player.OnObjectPickUpEvent -= OnPlayerInteraction;
+			////player.OnObjectPickUpEvent -= OnPlayerInteraction;
 			_interactionInstructionRenderer.enabled = false;
 			Debug.LogWarning("Turning off E on exit for " + transform.parent.name);
 		}
 	}
 
-	public virtual void OnPlayerInteraction(Player player)
+	public ObjectInteractions OnPlayerInteraction(TaskObject playersCurrentHeldObject)
 	{
+		if (playersCurrentHeldObject != null)
+			return ObjectInteractions.NoAction;
+
+		Player player = FindObjectOfType<Player>();
+
 		Debug.Log("Task Object player has interacted with " + gameObject.name);
 
 		_isCarried = true;
 		player.OnObjectDropEvent += OnPlayerDropped;
-		player.OnObjectPickUpEvent -= OnPlayerInteraction;
 
+		//TODO: This reference will need to be updated to a global object manager at some point to facilitate multiplayer.
 		ChangeObjectParent(player.transform, player.transform.position + player.transform.forward);
 
 		_playerDetectionZone.enabled = false;
 		_interactionInstructionRenderer.enabled = false;
 		Debug.LogWarning("Turning off E on interaction for " + transform.parent.name);
 		_taskObjectRigidBody.isKinematic = true;
+
+		return ObjectInteractions.TaskObjectPickUp;
 	}
+
+	////public virtual void OnPlayerInteraction(Player player)
+	////{
+	////	Debug.Log("Task Object player has interacted with " + gameObject.name);
+
+	////	_isCarried = true;
+	////	player.OnObjectDropEvent += OnPlayerDropped;
+	////	player.OnObjectPickUpEvent -= OnPlayerInteraction;
+
+	////	//TODO: This reference will need to be updated to a global object manager at some point to facilitate multiplayer.
+	////	ChangeObjectParent(player.transform, player.transform.position + player.transform.forward);
+
+	////	_playerDetectionZone.enabled = false;
+	////	_interactionInstructionRenderer.enabled = false;
+	////	Debug.LogWarning("Turning off E on interaction for " + transform.parent.name);
+	////	_taskObjectRigidBody.isKinematic = true;
+	////}
 
 	public virtual void OnPlayerDropped(Player player)
 	{
@@ -100,7 +124,7 @@ public class TaskObject : MonoBehaviour
 
 		_isCarried = false;
 		player.OnObjectDropEvent -= OnPlayerDropped;
-		player.OnObjectPickUpEvent -= OnPlayerInteraction;
+		////player.OnObjectPickUpEvent -= OnPlayerInteraction;
 
 		ChangeObjectParent(null, transform.position);
 

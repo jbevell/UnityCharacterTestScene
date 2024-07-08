@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class TaskObjectSpawnUtility : MonoBehaviour
+public static class TaskObjectSpawnUtility
 {
-	public GameObject BreadstickPrefab;
-	public GameObject BallPrefab;
+	public static GameObject BreadstickPrefab;
+	public static GameObject BallPrefab;
 
-	public void MakeBread(Vector3 position, Quaternion rotation)
+	public static void MakeBread(Vector3 position, Quaternion rotation)
 	{
-		Instantiate(BreadstickPrefab, position, rotation);
+		Object.Instantiate(BreadstickPrefab, position, rotation);
 	}
 
-	public void MakeBall(Vector3 position, Quaternion rotation)
+	public static void MakeBall(Vector3 position, Quaternion rotation)
 	{
-		Instantiate(BallPrefab, position, rotation);
+		Object.Instantiate(BallPrefab, position, rotation);
 	}
 }

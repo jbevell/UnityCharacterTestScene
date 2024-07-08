@@ -1,6 +1,6 @@
 public class BallTaskObject : TaskObject
 {
-	private void Start()
+	private new void Start()
 	{
 		base.Start();
 		_taskObjectType = TaskObjectType.Ball;

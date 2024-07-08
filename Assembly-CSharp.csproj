@@ -59,12 +59,15 @@
     <Compile Include="Assets\Scripts\Utility\ObjectLookAt.cs" />
     <Compile Include="Assets\Scripts\Enums\Tags.cs" />
     <Compile Include="Assets\Scripts\Enums\StationType.cs" />
+    <Compile Include="Assets\Scripts\Station\ProducerStationTypeFunctionality.cs" />
     <Compile Include="Assets\Scripts\Player\FootRotator.cs" />
     <Compile Include="Assets\Scripts\Station\Subclasses\BreadstickConverter.cs" />
+    <Compile Include="Assets\Scripts\Station\ConverterStationTypeFunctionality.cs" />
     <Compile Include="Assets\PIDTest\PIDTest.cs" />
     <Compile Include="Assets\Scripts\Utility\FollowObjectStaticRotation.cs" />
     <Compile Include="Assets\Scripts\Station\Station.cs" />
     <Compile Include="Assets\Scripts\Station\Subclasses\BallProducer.cs" />
+    <Compile Include="Assets\Scripts\Station\ConsumerStationTypeFunctionality.cs" />
     <Compile Include="Assets\Scripts\TaskObjects\BallTaskObject.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Enums\TaskObjectType.cs" />
@@ -74,8 +77,11 @@
     <Compile Include="Assets\Scripts\TaskObjects\TaskObject.cs" />
     <Compile Include="Assets\Scripts\TaskObjects\BreadstickTaskObject.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Station\Subclasses\Furnace.cs" />
+    <Compile Include="Assets\Scripts\Station\IInteractive.cs" />
     <Compile Include="Assets\Scripts\Utility\PID.cs" />
-    <Compile Include="Assets\Scripts\Station\ConverterStation.cs" />
+    <Compile Include="Assets\Scripts\Station\StationTypeFunctionality.cs" />
+    <Compile Include="Assets\Scripts\Enums\ObjectInteractions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
