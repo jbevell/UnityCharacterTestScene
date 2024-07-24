@@ -7,43 +7,41 @@ public class ConsumerStationTypeFunctionality : StationTypeFunctionality
 	public bool UseQueue = false;
 	[HideInInspector] public int QueueLimit;
 
-	private Queue<TaskObject> itemQueue;
+	private Queue<TaskObjectType> itemQueue;
 
-	public Action<TaskObject> OnConsumption;
+	public Action<TaskObjectType> OnConsumption;
 
 	private void Start()
 	{
 		if (UseQueue)
 		{
-			itemQueue = new Queue<TaskObject>();
+			itemQueue = new Queue<TaskObjectType>();
 		}
 	}
 
 	public void OnPlayerInteraction(TaskObject objectToConsume = null)
 	{
+		if (objectToConsume == null)
+			return;
+
 		if (UseQueue)
 		{
-			if (objectToConsume == null)
-				WithdrawItem();
-			else if (TryToStore(objectToConsume))
+			if (TryToStore(objectToConsume.TaskObjectType))
 				objectToConsume.DestroyTaskObject();
 		}
 		else
 		{
-			if (objectToConsume == null)
-				return;
-
 			objectToConsume.DestroyTaskObject();
 		}
 	}
 
-	private bool TryToStore(TaskObject objectToStore)
+	private bool TryToStore(TaskObjectType typeToStore)
 	{
 		bool storageSucceeded = false;
 
 		if (UseQueue && itemQueue.Count < QueueLimit)
 		{
-			itemQueue.Enqueue(objectToStore);
+			itemQueue.Enqueue(typeToStore);
 			storageSucceeded = true;
 		}
 
@@ -52,24 +50,14 @@ public class ConsumerStationTypeFunctionality : StationTypeFunctionality
 
 	public bool UseStoredItem()
 	{
-		TaskObject taskObject;
+		TaskObjectType type;
 
-		if (itemQueue.TryDequeue(out taskObject))
+		if (itemQueue.TryDequeue(out type))
 		{
-			OnConsumption(taskObject);
+			OnConsumption(type);
 			return true;
 		}
 
 		return false;
-	}
-
-	public void WithdrawItem()
-	{
-		if (itemQueue.Count == 0)
-			return;
-
-		TaskObject taskObject = itemQueue.Dequeue();
-
-		Instantiate(taskObject);
 	}
 }
