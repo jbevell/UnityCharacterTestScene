@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class BreadstickConverter : Station
 {
-	[SerializeField] private GameObject spawnableObjectPrefab;
-	[SerializeField] private float _productionTimeLimit = 5f;
-
 	ConverterStationTypeFunctionality converterComponent;
 
 	private void Start()
 	{
 		converterComponent = GetComponent<ConverterStationTypeFunctionality>();
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (converterComponent == null)
+			return;
+
+		converterComponent.AttemptStreamIdleEffect(other);
 	}
 
 	public override ObjectInteractions OnPlayerInteraction(TaskObject playersHeldObject = null)

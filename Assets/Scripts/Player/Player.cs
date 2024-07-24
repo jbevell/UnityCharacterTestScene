@@ -1,6 +1,4 @@
-using System.Linq;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,11 +9,8 @@ public class Player : MonoBehaviour
 	private Collider _currentFocusedTrigger = null;
 	private float _currentTriggerDistance = 100f;
 
-	public delegate void ObjectPickUpEvent(Player player);
-	public event ObjectPickUpEvent OnObjectPickUpEvent;
-
-	public delegate void ObjectDropEvent(Player player);
-	public event ObjectDropEvent OnObjectDropEvent;
+	public Action<Player> OnObjectPickUpEvent;
+	public Action<Player> OnObjectDropEvent;
 
 	public string ID => _playerID;
     public TaskObject HeldObject => _heldObject;
@@ -110,19 +105,23 @@ public class Player : MonoBehaviour
 	private void OnTriggerStay(Collider other)
 	{
 		UpdateCurrentTrigger(other);
+
+		// Task Object
+		if (other.transform.CompareTag(Tags.TaskObject.ToString()) && !IsHoldingObject)
+			other.GetComponent<TaskObject>().OnPlayerStay(this);
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
 		Transform targetTransform = other.gameObject.transform;
 
-		// Station
-		if (targetTransform.CompareTag(Tags.Station.ToString()))
-			other.GetComponent<Station>().OnPlayerExited();
-
 		// Task Object
 		if (targetTransform.CompareTag(Tags.TaskObject.ToString()))
 			other.GetComponent<TaskObject>().OnPlayerExited(this);
+
+		// Station
+		if (targetTransform.CompareTag(Tags.Station.ToString()))
+			other.GetComponent<Station>().OnPlayerExited();
 
 		if (other == _currentFocusedTrigger)
 		{

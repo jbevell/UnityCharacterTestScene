@@ -28,7 +28,10 @@ public class PlayerMovement : MonoBehaviour
 	private void Start()
 	{
 		if (_doTheFunkySpin)
+		{
 			PlayerRigidBody.useGravity = false;
+			PlayerRigidBody.constraints = RigidbodyConstraints.None;
+		}
 		else
 		{
 			PlayerRigidBody.maxAngularVelocity = float.MaxValue;

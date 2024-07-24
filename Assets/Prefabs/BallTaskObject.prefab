@@ -61,6 +61,7 @@ MonoBehaviour:
   _interactionInstructionObject: {fileID: 4490884407245230783}
   _mainObject: {fileID: 5849596233697225353}
   _taskObjectRigidBody: {fileID: 1400407992}
+  _taskObjectType: 1
 --- !u!1 &4490884407245230783
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ Transform:
   - {fileID: 2920494761951590762}
   - {fileID: 1677207356}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8352961616495852323
 MeshFilter:

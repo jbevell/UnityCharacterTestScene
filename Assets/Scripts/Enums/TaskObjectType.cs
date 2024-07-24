@@ -1,5 +1,6 @@
 public enum TaskObjectType
 {
 	Breadstick,
-	Ball
+	Ball,
+	Donut
 }

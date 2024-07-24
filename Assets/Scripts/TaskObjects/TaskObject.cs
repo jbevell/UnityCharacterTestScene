@@ -1,8 +1,4 @@
-using UnityEngine.Events;
 using UnityEngine;
-using System;
-using Unity.VisualScripting;
-using UnityEngine.AI;
 
 public class TaskObject : MonoBehaviour, IInteractive
 {
@@ -14,7 +10,7 @@ public class TaskObject : MonoBehaviour, IInteractive
 	protected Collider _playerDetectionZone;
 	protected Camera _cameraReference;
 
-	protected TaskObjectType _taskObjectType;
+	[SerializeField] protected TaskObjectType _taskObjectType;
 	protected bool _isCarried = false;
 	
 	public TaskObjectType TaskObjectType => _taskObjectType;
@@ -28,8 +24,6 @@ public class TaskObject : MonoBehaviour, IInteractive
 		_interactionInstructionRenderer.enabled = false;
 	}
 
-	// TODO: Prevent grabbing multiple objects
-	// TODO: Prevent missing event assignment
 	public virtual void OnPlayerEntered(Player player)
 	{
 		if (player.IsHoldingObject)
@@ -37,10 +31,10 @@ public class TaskObject : MonoBehaviour, IInteractive
 
 		Debug.Log("Entering task object trigger");
 
-		OnPlayerEnteredTriggerCheck(player);
+		CheckPlayerInteractionFocus(player);
 	}
 
-	private void OnPlayerEnteredTriggerCheck(Player player)
+	private void CheckPlayerInteractionFocus(Player player)
 	{
 		bool triggersMatch = player.PrioritizedTrigger == _playerDetectionZone;
 		Debug.Log("Do triggers match for this trigger enter? " + triggersMatch);
@@ -62,7 +56,10 @@ public class TaskObject : MonoBehaviour, IInteractive
 
 	public virtual void OnPlayerStay(Player player)
 	{
-		
+		if (player.IsHoldingObject)
+			return;
+
+		CheckPlayerInteractionFocus(player);
 	}
 	
 	public virtual void OnPlayerExited(Player player)

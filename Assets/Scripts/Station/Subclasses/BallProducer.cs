@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class BallProducer : Station
 {
-	[SerializeField] private GameObject spawnableObjectPrefab;
-
 	ProducerStationTypeFunctionality producerComponent;
 
 	// Start is called before the first frame update
@@ -14,7 +12,7 @@ public class BallProducer : Station
 
 	public override ObjectInteractions OnPlayerInteraction(TaskObject taskObject = null)
 	{
-		producerComponent.ProduceItem(transform.position + transform.forward, new Quaternion());
+		producerComponent.ProduceItem(expulsionForce: transform.forward * 5);
 		return ObjectInteractions.NoAction;
 	}
 }

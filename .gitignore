@@ -4,3 +4,5 @@
 /.vs/PhysicsBasedCharacterController/FileContentIndex
 /Logs
 /Notes
+*.log
+/Logs
