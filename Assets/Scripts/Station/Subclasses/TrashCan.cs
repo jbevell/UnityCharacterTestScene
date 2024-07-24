@@ -9,12 +9,13 @@ public class TrashCan : Station
 	private void Start()
 	{
 		consumerComponent = GetComponent<ConsumerStationTypeFunctionality>();
-		consumerComponent.UseQueue = false;
+		//consumerComponent.UseQueue = false;
 	}
 
 	public override ObjectInteractions OnPlayerInteraction(TaskObject playerHeldTaskObject)
     {
-		consumerComponent.OnPlayerInteraction(playerHeldTaskObject);
+		if (!consumerComponent.OnPlayerInteraction(playerHeldTaskObject))
+			return ObjectInteractions.NoAction;
 
 		return ObjectInteractions.StationTake;
     }

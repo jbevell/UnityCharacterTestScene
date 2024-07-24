@@ -4776,12 +4776,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6040346054131158914, guid: 4999c357d0ceb9744a97407fce520d46, type: 3}
+      propertyPath: UseQueue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040346054131158914, guid: 4999c357d0ceb9744a97407fce520d46, type: 3}
       propertyPath: useQueue
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6040346054131158914, guid: 4999c357d0ceb9744a97407fce520d46, type: 3}
       propertyPath: useStack
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040346054131158914, guid: 4999c357d0ceb9744a97407fce520d46, type: 3}
+      propertyPath: QueueLimit
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6040346055474082808, guid: 4999c357d0ceb9744a97407fce520d46, type: 3}
       propertyPath: m_LocalPosition.y

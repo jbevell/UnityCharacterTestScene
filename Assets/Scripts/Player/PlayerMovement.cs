@@ -6,8 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody PlayerRigidBody;
 	public InputActionAsset GamepadInput;
 
-	private PID playerRotationPIDX;
-	private PID playerRotationPIDZ;
 	private Vector3 _playerMovementInput;
 	private bool _isMoving = false;
 	private bool _isGrounded = true;

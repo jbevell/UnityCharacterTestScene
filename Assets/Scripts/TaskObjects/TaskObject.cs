@@ -6,6 +6,8 @@ public class TaskObject : MonoBehaviour, IInteractive
 	[SerializeField] protected GameObject _mainObject;
 	[SerializeField] protected Rigidbody _taskObjectRigidBody;
 
+	protected Renderer _objectMeshRenderer;
+	protected Collider _objectCollider;
 	protected MeshRenderer _interactionInstructionRenderer;
 	protected Collider _playerDetectionZone;
 	protected Camera _cameraReference;
@@ -17,6 +19,8 @@ public class TaskObject : MonoBehaviour, IInteractive
 
 	protected void Start()
 	{
+		_objectMeshRenderer = GetComponentInParent<Renderer>();
+		_objectCollider = transform.parent.GetComponent<Collider>();
 		_interactionInstructionRenderer = _interactionInstructionObject.GetComponent<MeshRenderer>();
 		_interactionInstructionObject.GetComponent<ObjectLookAt>().ObjectToLookAt = FindObjectOfType<Camera>().gameObject;
 		_playerDetectionZone = GetComponent<Collider>();
@@ -131,15 +135,36 @@ public class TaskObject : MonoBehaviour, IInteractive
 		_taskObjectRigidBody.isKinematic = false;
 	}
 
-	public void ChangeObjectParent(Transform newParent, Vector3 relativePosition)
+	public void ChangeObjectParent(Transform newParent, Vector3 position)
 	{
 		_mainObject.transform.SetParent(newParent, true);
-		_mainObject.transform.SetPositionAndRotation(relativePosition, new Quaternion());
+		_mainObject.transform.SetPositionAndRotation(position, new Quaternion());
 		_mainObject.transform.localScale = Vector3.one;
 	}
 
 	public void DestroyTaskObject()
 	{
 		Destroy(_mainObject);
+	}
+
+	public void HideTaskObject(Transform newParent, Vector3 hidePosition)
+	{
+		ChangeObjectParent(newParent, hidePosition);
+		_objectMeshRenderer.enabled = false;
+		_objectCollider.enabled = false;
+		_playerDetectionZone.enabled = false;
+		_taskObjectRigidBody.isKinematic = true;
+	}
+
+	public void ShowTaskObject(Transform newParent = null, Vector3? moveToPosition = null)
+	{
+		if (moveToPosition == null)
+			moveToPosition = transform.position;
+
+		ChangeObjectParent(null, (Vector3)moveToPosition);
+		_objectMeshRenderer.enabled = true;
+		_objectCollider.enabled = true;
+		_playerDetectionZone.enabled = true;
+		_taskObjectRigidBody.isKinematic = false;
 	}
 }
