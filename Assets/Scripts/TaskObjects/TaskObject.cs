@@ -101,23 +101,6 @@ public class TaskObject : MonoBehaviour, IInteractive
 		return ObjectInteractions.TaskObjectPickUp;
 	}
 
-	////public virtual void OnPlayerInteraction(Player player)
-	////{
-	////	Debug.Log("Task Object player has interacted with " + gameObject.name);
-
-	////	_isCarried = true;
-	////	player.OnObjectDropEvent += OnPlayerDropped;
-	////	player.OnObjectPickUpEvent -= OnPlayerInteraction;
-
-	////	//TODO: This reference will need to be updated to a global object manager at some point to facilitate multiplayer.
-	////	ChangeObjectParent(player.transform, player.transform.position + player.transform.forward);
-
-	////	_playerDetectionZone.enabled = false;
-	////	_interactionInstructionRenderer.enabled = false;
-	////	Debug.LogWarning("Turning off E on interaction for " + transform.parent.name);
-	////	_taskObjectRigidBody.isKinematic = true;
-	////}
-
 	public virtual void OnPlayerDropped(Player player)
 	{
 		if (!_isCarried)

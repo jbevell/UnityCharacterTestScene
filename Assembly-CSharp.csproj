@@ -61,8 +61,11 @@
     <Compile Include="Assets\Scripts\Enums\StationType.cs" />
     <Compile Include="Assets\Scripts\Station\Functionality Types\ProducerStationTypeFunctionality.cs" />
     <Compile Include="Assets\Scripts\Player\FootRotator.cs" />
+    <Compile Include="Assets\Scripts\TaskObjects\ScriptableTaskObject.cs" />
     <Compile Include="Assets\Scripts\Station\Subclasses\BreadstickConverter.cs" />
+    <Compile Include="Assets\Scripts\Utility\QuaternionTest.cs" />
     <Compile Include="Assets\Scripts\Station\Functionality Types\ConverterStationTypeFunctionality.cs" />
+    <Compile Include="Assets\Scripts\Utility\QuaternionTestObject.cs" />
     <Compile Include="Assets\Scripts\Utility\FollowObjectStaticRotation.cs" />
     <Compile Include="Assets\Scripts\Station\Station.cs" />
     <Compile Include="Assets\Scripts\Station\Subclasses\BallProducer.cs" />
@@ -79,7 +82,8 @@
     <Compile Include="Assets\Scripts\Station\IInteractive.cs" />
     <Compile Include="Assets\Scripts\Station\StationTypeFunctionality.cs" />
     <Compile Include="Assets\Scripts\Enums\ObjectInteractions.cs" />
-    <Compile Include="Assets\Scripts\TaskObjects\ScriptableTaskObject.cs" />
+    <Compile Include="Assets\Scripts\Utility\QuaternionUtility.cs" />
+    <Compile Include="Assets\Scripts\Player\UprightSpringBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

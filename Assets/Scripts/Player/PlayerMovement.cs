@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,13 +6,17 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody PlayerRigidBody;
 	public InputActionAsset GamepadInput;
+	[SerializeField] private SpringJoint PlayerOrientationSpring;
 
+	private UprightSpringBehaviour _springBehaviour;
 	private Vector3 _playerMovementInput;
 	private bool _isMoving = false;
 	private bool _isGrounded = true;
 	private bool _jumpPressed = false;
 	private float _movementForce = 100;
 	private float _velocityMagnitudeCap = 10;
+
+	private Quaternion _playerTargetOrientation;
 
 	[SerializeField] private bool _doTheFunkySpin = true;
 	private readonly Vector3 funkySpinSpeed = new Vector3(1f, 1f, 1f);
@@ -25,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
 	
 	private void Start()
 	{
+
+		_springBehaviour = PlayerOrientationSpring.GetComponent<UprightSpringBehaviour>();
+
 		if (_doTheFunkySpin)
 		{
 			PlayerRigidBody.useGravity = false;
@@ -33,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 		else
 		{
 			PlayerRigidBody.maxAngularVelocity = float.MaxValue;
-			PlayerRigidBody.angularDrag = 0;
+			PlayerRigidBody.angularDrag = 5;
 		}
 	}
 
@@ -48,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 			_isMoving = true;
 		}
 
-		////GamepadInput.FindActionMap("Schmove").;
+		////GamepadInput.FindActionMap("Schmove");
 
 		if (Input.GetKey(KeyCode.S))
 		{
@@ -68,6 +76,12 @@ public class PlayerMovement : MonoBehaviour
 			_isMoving = true;
 		}
 
+		if (_playerMovementInput.magnitude > 0)
+		{
+			_springBehaviour.LookAtPlayerForce(Vector3.Normalize(_playerMovementInput));
+			_playerTargetOrientation = PlayerOrientationSpring.transform.rotation;
+		}
+
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			_jumpPressed = true;
@@ -80,8 +94,9 @@ public class PlayerMovement : MonoBehaviour
 		MovePlayer();
 
 		if (!_doTheFunkySpin)
-		{	
-			RotateCharacter();
+		{
+			AdjustRotation();
+			//RotateCharacter();
 			CounterCharacterRotation();
 		}
 
@@ -89,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 		AdjustFallingAndJumping();
 
 		if (_doTheFunkySpin)
-			PlayerRigidBody.AddTorque(Vector3.Scale(Random.onUnitSphere, funkySpinSpeed));
+			PlayerRigidBody.AddTorque(Vector3.Scale(UnityEngine.Random.onUnitSphere, funkySpinSpeed));
 
 		////Debug.Log(_isGrounded);
 		////Debug.Log(PlayerRigidBody.velocity.magnitude);
@@ -155,30 +170,28 @@ public class PlayerMovement : MonoBehaviour
 		////Debug.DrawLine(PlayerRigidBody.position, downRaycastInfo.point, Color.green); // Raycast Debug
 	}
 
-	// TODO: Determine whether spring force will work or if Torque can be used instead.
-	private void AdjustHorizontalRotation()
+	private void AdjustRotation()
 	{
-		////Quaternion currentPlayerRotation = transform.rotation;
-		///Quaternion rotationTarget = ShortestRotation( , currentPlayerRotation);
+		Quaternion currentPlayerRotation = transform.rotation;
+		Quaternion rotationTarget = QuaternionUtility.ShortestRotation(_playerTargetOrientation, currentPlayerRotation);
+		
+		float rotDegrees;
+		Vector3 rotAxis;
 
-		////SpringJoint joint = gameObject.GetComponent<SpringJoint>();
-		////joint.
+		Debug.Log($"PlayerTargetOrientation is currently {QuaternionUtility.FormatAsQuaternionExpression(_playerTargetOrientation)}");
+		Debug.Log($"RotationTarget is {QuaternionUtility.FormatAsQuaternionExpression(rotationTarget)}");
+
+		rotationTarget.ToAngleAxis(out rotDegrees, out rotAxis);
+		rotationTarget.Normalize();
+
+		float rotRadians = rotDegrees * Mathf.Deg2Rad;
+
+		Vector3 torqueValue = (rotAxis * (rotRadians * PlayerOrientationSpring.spring)) - (PlayerRigidBody.angularVelocity * PlayerOrientationSpring.damper);
+
+		Debug.Log($"Torque value is {torqueValue}");
+
+		PlayerRigidBody.AddTorque(torqueValue);
 	}
-
-	////public static Quaternion ShortestRotation(Quaternion a, Quaternion b)
-	////{
-	////	if (Quaternion.Dot(a, b) < 0)
-	////	{
-	////		return a * Quaternion.Inverse(Multiply(b, -1));
-	////	}
-
-	////	else return a * Quaternion.Inverse(b);
-	////}
-
-	////public static Quaternion Multiply(Quaternion input, float scalar)
-	////{
-	////	return new Quaternion(input.x * scalar, input.y * scalar, input.z * scalar, input.w * scalar);
-	////}
 
 	private void MovePlayer()
     {
