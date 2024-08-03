@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class ConsumerStationTypeFunctionality : StationTypeFunctionality
@@ -7,57 +8,78 @@ public class ConsumerStationTypeFunctionality : StationTypeFunctionality
 	public bool UseQueue = false;
 	[HideInInspector] public int QueueLimit;
 
-	private Queue<TaskObjectType> itemQueue;
+	private Queue<TaskObject> itemQueue;
 
-	public Action<TaskObjectType> OnConsumption;
+	public Action<TaskObject> OnConsumption;
 
 	private void Start()
 	{
 		if (UseQueue)
 		{
-			itemQueue = new Queue<TaskObjectType>();
+			itemQueue = new Queue<TaskObject>();
 		}
 	}
 
-	public void OnPlayerInteraction(TaskObject objectToConsume = null)
+	public bool OnPlayerInteraction(TaskObject objectToConsume = null, Vector3? spawnPosition = null)
 	{
-		if (objectToConsume == null)
-			return;
-
 		if (UseQueue)
 		{
-			if (TryToStore(objectToConsume.TaskObjectType))
-				objectToConsume.DestroyTaskObject();
+			if (spawnPosition == null)
+				spawnPosition = transform.position + transform.forward;
+
+			if (objectToConsume == null)
+			{
+				WithdrawItem((Vector3)spawnPosition);
+				return true;
+			}
+
+			if (TryToStore(objectToConsume))
+			{
+				objectToConsume.HideTaskObject(transform, transform.position);
+				return true;
+			}
+			else
+				return false;
 		}
 		else
 		{
+			if (objectToConsume == null)
+				return false;
+
 			objectToConsume.DestroyTaskObject();
+			return true;
 		}
 	}
 
-	private bool TryToStore(TaskObjectType typeToStore)
+	private bool TryToStore(TaskObject objectToStore)
 	{
-		bool storageSucceeded = false;
+		if (itemQueue.Count >= QueueLimit)
+			return false;
 
-		if (UseQueue && itemQueue.Count < QueueLimit)
-		{
-			itemQueue.Enqueue(typeToStore);
-			storageSucceeded = true;
-		}
+		itemQueue.Enqueue(objectToStore);
 
-		return storageSucceeded;
+		return true;
 	}
 
 	public bool UseStoredItem()
 	{
-		TaskObjectType type;
+		TaskObject taskObject;
 
-		if (itemQueue.TryDequeue(out type))
+		if (itemQueue.TryDequeue(out taskObject))
 		{
-			OnConsumption(type);
+			OnConsumption(taskObject);
 			return true;
 		}
 
 		return false;
+	}
+
+	public void WithdrawItem(Vector3 spawnPosition)
+	{
+		if (itemQueue.Count == 0)
+			return;
+
+		TaskObject taskObject = itemQueue.Dequeue();
+		taskObject.ShowTaskObject(transform, spawnPosition);
 	}
 }

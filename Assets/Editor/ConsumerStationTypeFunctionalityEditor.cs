@@ -5,7 +5,14 @@ using UnityEngine;
 
 [CustomEditor(typeof(ConsumerStationTypeFunctionality))]
 public class ConsumerStationTypeFunctionalityEditor : Editor
-{ 
+{
+	SerializedProperty queueLimit;
+
+	private void OnEnable()
+	{
+		queueLimit = serializedObject.FindProperty("QueueLimit");
+	}
+
 	public override void OnInspectorGUI()
 	{
 		base.OnInspectorGUI();
@@ -14,10 +21,14 @@ public class ConsumerStationTypeFunctionalityEditor : Editor
 
 		if (script.UseQueue)
 		{
+			serializedObject.Update();
+
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.LabelField("Max Queue Limit");
-			script.QueueLimit = EditorGUILayout.IntField(script.QueueLimit);
+			queueLimit.intValue = EditorGUILayout.IntField(queueLimit.intValue);
 			EditorGUILayout.EndHorizontal();
+
+			serializedObject.ApplyModifiedProperties();
 		}
 	}
 }

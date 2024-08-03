@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\taskobjects\\taskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|e:\\repos\\unitycharactertest\\3dcharactertestbed\\physicsbasedcharactercontroller\\assets\\scripts\\station\\subclasses\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\functionality types\\consumerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\functionality types\\consumerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|e:\\repos\\unitycharactertest\\3dcharactertestbed\\physicsbasedcharactercontroller\\assets\\scripts\\taskobjects\\taskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taskobjects\\taskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\iinteractive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\iinteractive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB1048EE-F0BF-2605-0B2A-2A8FE1290903}|Assembly-CSharp-Editor.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\editor\\consumerstationtypefunctionalityeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB1048EE-F0BF-2605-0B2A-2A8FE1290903}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\consumerstationtypefunctionalityeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|e:\\repos\\unitycharactertest\\3dcharactertestbed\\physicsbasedcharactercontroller\\assets\\scripts\\taskobjects\\scriptabletaskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taskobjects\\scriptabletaskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\functionality types\\converterstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\functionality types\\converterstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\subclasses\\furnace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\furnace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\functionality types\\producerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\functionality types\\producerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\subclasses\\ballproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\ballproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\subclasses\\furnace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\furnace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\enums\\taskobjecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +59,8 @@
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taskobjects\\balltaskobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\functionality types\\consumerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\functionality types\\consumerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|e:\\repos\\unitycharactertest\\3dcharactertestbed\\physicsbasedcharactercontroller\\assets\\scripts\\station\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB1048EE-F0BF-2605-0B2A-2A8FE1290903}|Assembly-CSharp-Editor.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\editor\\consumerstationtypefunctionalityeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB1048EE-F0BF-2605-0B2A-2A8FE1290903}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\consumerstationtypefunctionalityeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\functionality types\\producerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\functionality types\\producerstationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\stationtypefunctionality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\subclasses\\breadstickconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\breadstickconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\subclasses\\ballproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\subclasses\\ballproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\station\\iinteractive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\station\\iinteractive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\enums\\objectinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,20 +95,16 @@
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\footrotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\utility\\objectlookat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utility\\objectlookat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\pidtest\\pidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\pidtest\\pidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\pidtest\\pidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\pidtest\\pidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\utility\\pid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1600AF8F-AB0A-34D8-8B3E-6C0A629F8180}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utility\\pid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\assets\\scripts\\utility\\pid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\utility\\pid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,11 +114,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "Station.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Station.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Station.cs",
@@ -119,18 +127,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T13:19:27.162Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Furnace.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\Furnace.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Subclasses\\Furnace.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\Furnace.cs",
               "RelativeToolTip": "Assets\\Scripts\\Station\\Subclasses\\Furnace.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAgwBsAAABWAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBUAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T18:04:50.986Z",
               "IsPinned": true,
@@ -138,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "BreadstickConverter.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\BreadstickConverter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Subclasses\\BreadstickConverter.cs",
@@ -151,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "BallProducer.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\BallProducer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Subclasses\\BallProducer.cs",
@@ -160,11 +167,12 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T18:00:40.514Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "StationTypeFunctionality.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\StationTypeFunctionality.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\StationTypeFunctionality.cs",
@@ -177,13 +185,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Player.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAWwGAAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T17:00:05.961Z",
               "IsPinned": true,
@@ -191,20 +199,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "IInteractive.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\IInteractive.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\IInteractive.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\IInteractive.cs",
               "RelativeToolTip": "Assets\\Scripts\\Station\\IInteractive.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T19:22:42.53Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ObjectInteractions.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Enums\\ObjectInteractions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\ObjectInteractions.cs",
@@ -217,21 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskObject.cs",
-              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\TaskObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TaskObjects\\TaskObject.cs",
-              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\TaskObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TaskObjects\\TaskObject.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T21:42:17.715Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ProducerStationTypeFunctionality.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Functionality Types\\ProducerStationTypeFunctionality.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Functionality Types\\ProducerStationTypeFunctionality.cs",
@@ -240,17 +235,18 @@
               "ViewState": "AQIAABwAAAAAAAAAAAAgwCoAAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T18:56:47.132Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ConverterStationTypeFunctionality.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Functionality Types\\ConverterStationTypeFunctionality.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Functionality Types\\ConverterStationTypeFunctionality.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Functionality Types\\ConverterStationTypeFunctionality.cs",
               "RelativeToolTip": "Assets\\Scripts\\Station\\Functionality Types\\ConverterStationTypeFunctionality.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAwAUAAAAHAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwFQAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T18:56:46.09Z",
               "IsPinned": true,
@@ -258,13 +254,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "ConsumerStationTypeFunctionality.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Functionality Types\\ConsumerStationTypeFunctionality.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Functionality Types\\ConsumerStationTypeFunctionality.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Functionality Types\\ConsumerStationTypeFunctionality.cs",
               "RelativeToolTip": "Assets\\Scripts\\Station\\Functionality Types\\ConsumerStationTypeFunctionality.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBMAAAACAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwDEAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T18:56:45.107Z",
               "IsPinned": true,
@@ -272,20 +268,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "ConsumerStationTypeFunctionalityEditor.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Editor\\ConsumerStationTypeFunctionalityEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\ConsumerStationTypeFunctionalityEditor.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Editor\\ConsumerStationTypeFunctionalityEditor.cs",
               "RelativeToolTip": "Assets\\Editor\\ConsumerStationTypeFunctionalityEditor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T20:27:20.756Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskObject.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\TaskObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TaskObjects\\TaskObject.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\TaskObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TaskObjects\\TaskObject.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAA2wI0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T21:42:17.715Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ScriptableTaskObject.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\ScriptableTaskObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TaskObjects\\ScriptableTaskObject.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\ScriptableTaskObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TaskObjects\\ScriptableTaskObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T17:16:47.379Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrashCan.cs",
+              "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\TrashCan.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Station\\Subclasses\\TrashCan.cs",
+              "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Station\\Subclasses\\TrashCan.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Station\\Subclasses\\TrashCan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T18:02:35.266Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "BallTaskObject.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\BallTaskObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskObjects\\BallTaskObject.cs",
@@ -293,12 +332,11 @@
               "RelativeToolTip": "Assets\\Scripts\\TaskObjects\\BallTaskObject.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T14:37:14.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T14:37:14.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "BreadstickTaskObject.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\TaskObjects\\BreadstickTaskObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskObjects\\BreadstickTaskObject.cs",
@@ -310,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "StationType.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Enums\\StationType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\StationType.cs",
@@ -322,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "FootRotator.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Player\\FootRotator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\FootRotator.cs",
@@ -334,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "FollowObjectStaticRotation.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Utility\\FollowObjectStaticRotation.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utility\\FollowObjectStaticRotation.cs",
@@ -346,19 +384,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 11,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAASAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T23:16:29.063Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "TaskObjectType.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Enums\\TaskObjectType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\TaskObjectType.cs",
@@ -366,12 +404,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enums\\TaskObjectType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAA6wAMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:09:06.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T18:09:06.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Tags.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Enums\\Tags.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\Tags.cs",
@@ -383,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ObjectLookAt.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Utility\\ObjectLookAt.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utility\\ObjectLookAt.cs",
@@ -395,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "PIDTest.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\PIDTest\\PIDTest.cs",
               "RelativeDocumentMoniker": "Assets\\PIDTest\\PIDTest.cs",
@@ -407,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "PID.cs",
               "DocumentMoniker": "E:\\Repos\\UnityCharacterTest\\3DCharacterTestBed\\PhysicsBasedCharacterController\\Assets\\Scripts\\Utility\\PID.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utility\\PID.cs",
