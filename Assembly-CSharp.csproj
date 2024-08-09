@@ -85,6 +85,8 @@
     <Compile Include="Assets\Scripts\Enums\ObjectInteractions.cs" />
     <Compile Include="Assets\Scripts\Utility\ObjectLauncher.cs" />
     <Compile Include="Assets\Scripts\Utility\SelfDestructTimer.cs" />
+    <Compile Include="Assets\Scripts\Station\Functionality Types\StorageStationTypeFunctionality.cs" />
+    <Compile Include="Assets\Scripts\Station\Subclasses\StorageLocker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

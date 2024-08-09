@@ -32,6 +32,6 @@ public class ObjectLauncher : MonoBehaviour
         if (throwableObject.GetComponent<Rigidbody>() != null)
             throwBody = throwableObject.GetComponentInChildren<Rigidbody>();
 
-        throwBody.AddForce(transform.forward * 30f, ForceMode.Impulse);
+        throwBody.AddForce(transform.forward * 30f * throwBody.mass, ForceMode.Impulse);
 	}
 }

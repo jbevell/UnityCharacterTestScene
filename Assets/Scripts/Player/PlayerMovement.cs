@@ -109,9 +109,9 @@ public class PlayerMovement : MonoBehaviour
 		else
 			_currentCoyoteTime -= Time.fixedDeltaTime;
 
-		Debug.Log("Is player grounded? " + _isGrounded);
-		Debug.Log($"Jump Cooldown is {_jumpCooldownTimer}");
-		Debug.Log($"Coyote time is {_currentCoyoteTime}");
+		////Debug.Log("Is player grounded? " + _isGrounded);
+		////Debug.Log($"Jump Cooldown is {_jumpCooldownTimer}");
+		////Debug.Log($"Coyote time is {_currentCoyoteTime}");
 
 		AdjustHeight();
 		MovePlayer();
