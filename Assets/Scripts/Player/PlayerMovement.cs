@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,29 +9,37 @@ public class PlayerMovement : MonoBehaviour
 	public InputActionAsset GamepadInput;
 	[SerializeField] private SpringJoint PlayerOrientationSpring;
 
+	private Quaternion _playerTargetOrientation;
 	private UprightSpringBehaviour _springBehaviour;
 	private Vector3 _playerMovementInput;
+	
 	private bool _isMoving = false;
 	private bool _isGrounded = true;
-	private bool _jumpPressed = false;
 	private float _movementForce = 100;
 	private float _velocityMagnitudeCap = 10;
 
-	private Quaternion _playerTargetOrientation;
+	// Jumping
+	private bool _jumpPressed = false;
+	private const float _jumpPower = 100f;
+	private const float _lowJumpPower = 10f;
+
+	// Coyote Time
+	private float _currentCoyoteTime = 0;
+	private const float _coyoteTimeStartValue = 0.15f;
+	private float _jumpCooldownTimer = 0;
+	private const float _jumpCooldownStartValue = 0.25f;
+
+	private const float _isGroundedBuffer = 0.01f;
+	private const float _fallPower = 5f;
+	private const float _rideHeight = 1.5f;
+	private const float _rideSpringStrength = 1200f;
+	private const float _rideSpringDamper = 25f;
 
 	[SerializeField] private bool _doTheFunkySpin = true;
 	private readonly Vector3 funkySpinSpeed = new Vector3(1f, 1f, 1f);
 
-	private const float _fallPower = 5f;
-	private const float _lowJumpPower = 6f;
-	private const float _rideHeight = 1.5f;
-	private const float _rideSpringStrength = 1500f;
-	private const float _rideSpringDamper = 25f;
-	private const float _jumpPower = 60f;
-	
 	private void Start()
 	{
-
 		_springBehaviour = PlayerOrientationSpring.GetComponent<UprightSpringBehaviour>();
 
 		if (_doTheFunkySpin)
@@ -50,13 +59,24 @@ public class PlayerMovement : MonoBehaviour
 		_isMoving = false;
 		_playerMovementInput = Vector3.zero;
 
+		////GamepadInput.FindActionMap("Schmove");
+		
+		CheckKeyPresses();
+
+		if (_playerMovementInput.magnitude > 0)
+		{
+			_springBehaviour.LookAtPlayerForce(Vector3.Normalize(_playerMovementInput));
+			_playerTargetOrientation = PlayerOrientationSpring.transform.rotation;
+		}
+	}
+
+	private void CheckKeyPresses()
+	{
 		if (Input.GetKey(KeyCode.W))
 		{
 			_playerMovementInput.z = _movementForce;
 			_isMoving = true;
 		}
-
-		////GamepadInput.FindActionMap("Schmove");
 
 		if (Input.GetKey(KeyCode.S))
 		{
@@ -76,12 +96,6 @@ public class PlayerMovement : MonoBehaviour
 			_isMoving = true;
 		}
 
-		if (_playerMovementInput.magnitude > 0)
-		{
-			_springBehaviour.LookAtPlayerForce(Vector3.Normalize(_playerMovementInput));
-			_playerTargetOrientation = PlayerOrientationSpring.transform.rotation;
-		}
-
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			_jumpPressed = true;
@@ -90,23 +104,34 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if (_isGrounded)
+			_currentCoyoteTime = _coyoteTimeStartValue;
+		else
+			_currentCoyoteTime -= Time.fixedDeltaTime;
+
+		Debug.Log("Is player grounded? " + _isGrounded);
+		Debug.Log($"Jump Cooldown is {_jumpCooldownTimer}");
+		Debug.Log($"Coyote time is {_currentCoyoteTime}");
+
 		AdjustHeight();
 		MovePlayer();
 
 		if (!_doTheFunkySpin)
 		{
 			AdjustRotation();
-			//RotateCharacter();
-			CounterCharacterRotation();
+			AdjustFallingAndJumping();
+
+			if (_jumpPressed && _jumpCooldownTimer <= 0)
+				Jump();
 		}
-
-		Jump();
-		AdjustFallingAndJumping();
-
-		if (_doTheFunkySpin)
+		else
 			PlayerRigidBody.AddTorque(Vector3.Scale(UnityEngine.Random.onUnitSphere, funkySpinSpeed));
 
-		////Debug.Log(_isGrounded);
+		if (_isGrounded)
+			_jumpCooldownTimer = 0;
+		else
+			_jumpCooldownTimer -= Time.fixedDeltaTime;
+
 		////Debug.Log(PlayerRigidBody.velocity.magnitude);
 		////Debug.Log($"Time: {Time.time}");
 	}
@@ -120,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
 		Physics.Raycast(PlayerRigidBody.position, downwardRayDirection, out downRaycastInfo);
 		rideHeightDifference = downRaycastInfo.distance - _rideHeight;
 
-		_isGrounded = rideHeightDifference <= 0.3f;
+		_isGrounded = rideHeightDifference <= _isGroundedBuffer;
 
 		// Jumping? Falling? No spring until grounded.
 		if (!_isGrounded)
@@ -178,8 +203,8 @@ public class PlayerMovement : MonoBehaviour
 		float rotDegrees;
 		Vector3 rotAxis;
 
-		Debug.Log($"PlayerTargetOrientation is currently {QuaternionUtility.FormatAsQuaternionExpression(_playerTargetOrientation)}");
-		Debug.Log($"RotationTarget is {QuaternionUtility.FormatAsQuaternionExpression(rotationTarget)}");
+		////Debug.Log($"PlayerTargetOrientation is currently {QuaternionUtility.FormatAsQuaternionExpression(_playerTargetOrientation)}");
+		////Debug.Log($"RotationTarget is {QuaternionUtility.FormatAsQuaternionExpression(rotationTarget)}");
 
 		rotationTarget.ToAngleAxis(out rotDegrees, out rotAxis);
 		rotationTarget.Normalize();
@@ -188,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
 
 		Vector3 torqueValue = (rotAxis * (rotRadians * PlayerOrientationSpring.spring)) - (PlayerRigidBody.angularVelocity * PlayerOrientationSpring.damper);
 
-		Debug.Log($"Torque value is {torqueValue}");
+		////Debug.Log($"Torque value is {torqueValue}");
 
 		PlayerRigidBody.AddTorque(torqueValue);
 	}
@@ -228,65 +253,41 @@ public class PlayerMovement : MonoBehaviour
 			PlayerRigidBody.drag = 0;
 	}
 
-	// TODO: Attempting to replace with torque forces. Calculate proper torque value and values to slow the rotation down so that player stops when facing velocity vector.
-	// Would a PD controller work for this? Could calculate the point on the x,z plane and just always have that point be the forward vector of the player.
-	private void RotateCharacter()
-	{
-		bool useTorque = false;
+	////private void RotateCharacter()
+	////{
+	////	bool useTorque = false;
 
-		if (useTorque)
-		{
-			Vector3 adjustedVelocity = new Vector3(PlayerRigidBody.velocity.x, 0, PlayerRigidBody.velocity.z);
+	////	if (useTorque)
+	////	{
+	////		Vector3 adjustedVelocity = new Vector3(PlayerRigidBody.velocity.x, 0, PlayerRigidBody.velocity.z);
 
-			Vector3 turnTorque = Vector3.Cross(adjustedVelocity, new Vector3(1, 0, 1));
+	////		Vector3 turnTorque = Vector3.Cross(adjustedVelocity, new Vector3(1, 0, 1));
 
-			PlayerRigidBody.AddTorque(turnTorque);
+	////		PlayerRigidBody.AddTorque(turnTorque);
 
-			Debug.Log(turnTorque);
-			Debug.DrawLine(PlayerRigidBody.transform.position, PlayerRigidBody.transform.position + turnTorque, Color.magenta);
-		}
-		else
-		{
-			// Original turn handling
-			Vector3 lookVelocity = Vector3.Scale(PlayerRigidBody.velocity, new Vector3(1, 0, 1));
+	////		Debug.Log(turnTorque);
+	////		Debug.DrawLine(PlayerRigidBody.transform.position, PlayerRigidBody.transform.position + turnTorque, Color.magenta);
+	////	}
+	////	else
+	////	{
+	////		// Original turn handling
+	////		Vector3 lookVelocity = Vector3.Scale(PlayerRigidBody.velocity, new Vector3(1, 0, 1));
 
-			if (lookVelocity.magnitude > 0.1f && !_doTheFunkySpin)
-				transform.rotation = Quaternion.LookRotation(lookVelocity);
-		}
-	}
-
-	private void CounterCharacterRotation()
-	{
-		////Vector3 adjustedVelocity = new Vector3(PlayerRigidBody.velocity.x, 0, PlayerRigidBody.velocity.z);
-		////Vector3 turnTorque = Vector3.Cross(adjustedVelocity, new Vector3(1, 0, 1));
-
-		////float yTorque = turnTorque.y * 0.5f;
-
-		////Vector3 rotationalVelocity = PlayerRigidBody.angularVelocity;
-
-		////yTorque -= rotationalVelocity.y * 1;
-
-		////Vector3 counterTorque = new Vector3(0, yTorque, 0);
-
-		////PlayerRigidBody.AddTorque(counterTorque);
-		
-		////Debug.Log(yTorque);
-		////Debug.Log("Angular rotation " + rotationalVelocity);
-		////Debug.DrawLine(PlayerRigidBody.transform.position, PlayerRigidBody.transform.position + counterTorque, Color.green);
-	}
+	////		if (lookVelocity.magnitude > 0.1f && !_doTheFunkySpin)
+	////			transform.rotation = Quaternion.LookRotation(lookVelocity);
+	////	}
+	////}
 
 	private void Jump()
 	{
-		if (!_jumpPressed)
-			return;
-
 		_jumpPressed = false;
 
-		if (!_isGrounded)
+		if (!_isGrounded && _currentCoyoteTime <= 0)
 			return;
 
-		Debug.Log("Jumping!");
-		
+		_isGrounded = false;
+   		_jumpCooldownTimer = _jumpCooldownStartValue;
+
 		Vector3 jumpForce = Vector3.up * _jumpPower;
 		Vector3 directionalJumpForce = PlayerRigidBody.velocity + jumpForce;
 
