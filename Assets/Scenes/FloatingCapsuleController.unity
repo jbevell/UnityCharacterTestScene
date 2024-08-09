@@ -327,8 +327,9 @@ GameObject:
   m_Component:
   - component: {fileID: 99767687}
   - component: {fileID: 99767686}
+  - component: {fileID: 99767688}
   m_Layer: 0
-  m_Name: BallLauncher
+  m_Name: ObjectLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,6 +363,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &99767688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99767685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d481f291e8a924ca62b46cd2e38994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToLookAt: {fileID: 1240526055}
+  LookRotationAdjustment: {x: 0, y: 0, z: 0}
 --- !u!1 &107839656
 GameObject:
   m_ObjectHideFlags: 0
